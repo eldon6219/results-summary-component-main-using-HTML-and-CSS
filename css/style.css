@@ -1,0 +1,203 @@
+/* start global */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    --font-size: 18px;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    padding: 1rem;
+}
+
+/* end  global */
+.card {
+    background-color: var(--White);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    box-shadow: 6px 6px 40px -8px;
+    width: 50rem;
+}
+@media(max-width:600px){
+    .card{
+        flex-direction: column;
+        width: 22rem;
+    }
+    }
+    
+
+.card>div>h1 {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.left-side {
+    flex-basis: 50%;
+    text-align: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 1.5rem;
+    
+}
+
+
+.card .left-side h1 {
+    color: hsla(0, 0%, 100%, 0.7);
+    font-weight: 500;
+    margin-top: 3rem;
+}
+
+.card .left-side .circle {
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.25rem auto 1rem;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.left-side .circle .text p {
+    font-size: 4rem;
+    color: var(--White);
+    margin-bottom: 0.3rem;
+    font-weight: 800;
+}
+
+.left-side .circle .text span {
+    color: hsla(0, 0%, 100%, 0.5)
+}
+
+.left-side h2 {
+    text-transform: capitalize;
+    color: var(--White);
+    font-weight: 900;
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    
+}
+
+.left-side p:last-child {
+    color: hsla(0, 0%, 100%, 0.6);
+    line-height: 1.2;
+    display: block;
+    width: 55%;
+    margin:1rem auto 0;
+}
+@media(max-width:600px){
+    .left-side p:last-child{
+        width:80%
+        ;margin-bottom: 2rem;
+    }
+}
+
+.right-side {
+    flex-basis: 48%;
+    padding: 2rem;
+}
+
+.right-side h1 {
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.right-side .card-inside {
+
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right-side .card-inside .card-inside-icon {
+    display: flex;
+    align-items: center;
+}
+
+.right-side .card-inside i {
+    margin-right: 1rem;
+}
+
+.right-side .card-inside h2 {
+    font-weight: 500;
+    font-size: var(--font-size);
+}
+
+.right-side .card-inside:nth-of-type(1) {
+    background-color: hsla(0, 100%, 67%, 0.1)
+}
+
+.right-side .card-inside:nth-of-type(1) i  , 
+.right-side .card-inside:nth-of-type(1) h2 {
+    color: var(--Light-red);
+}
+
+.right-side .card-inside:nth-of-type(2) {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+.right-side .card-inside:nth-of-type(2) i , 
+.right-side .card-inside:nth-of-type(2) h2 {
+    color: var(--Orangey-yellow);
+}
+.right-side .card-inside:nth-of-type(3) {
+    background-color: hsla(166, 100%, 37% , 0.1);
+}
+.right-side .card-inside:nth-of-type(3) i , 
+.right-side .card-inside:nth-of-type(3) h2 {
+    color: var(--Green-teal);
+}
+.right-side .card-inside:nth-of-type(4) {
+    background-color: hsla(234, 85%, 45% ,0.1);
+}
+.right-side .card-inside:nth-of-type(4) i ,
+.right-side .card-inside:nth-of-type(4) h2 { 
+    color: var(--Cobalt-blue);
+}
+.right-side .card-inside p {
+    font-weight: 800;
+    color: var(--Dark-gray-blue);
+    font-size: 1.2rem;
+}
+
+.right-side .card-inside p span {
+    color: hsla(224, 30%, 27% , 0.5);
+    margin: 0.3rem;
+}
+.card .btn { 
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    cursor: pointer;
+    transition: .3s;
+    border: 0;
+}
+.card .btn:hover { 
+    background-image: linear-gradient(hsl(252, 100%, 67%) ,hsl(241, 81%, 54%) );
+}
